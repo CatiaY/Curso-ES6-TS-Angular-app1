@@ -1,0 +1,13 @@
+.exemplo {
+    color:green
+}
+
+/* Para trocar a cor de fundo e da letra sem afetar o estilo já definido do bootstrap,
+fazer uma sobreposição do atributo da classe navbar aqui */
+.navbar {
+    background: #1CB0F6
+}
+
+.navbar-brand{
+    color: white
+}

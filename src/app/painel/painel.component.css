@@ -1,0 +1,6 @@
+/* Sobreposição do estilo do jumbotron para adicionar espaço acima e reduzir margens internas (padding) */
+.jumbotron {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,30 @@
+<app-topo></app-topo>
+
+<!-- else aponta para outro template, o qual será exibido em detrimento do if.
+Indica uma diretiva para o else
+Deve importar o módulo CommonModule no arquivo .ts-->
+<div *ngIf="jogoEmAndamento; else fimDeJogo">
+    <app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel> <!--(Método que será executado no componente pai)="Quando o evento será executado com base no output do componente filho"-->
+</div>
+<!-- Exibe se o *ngIf for falso, ou seja quando cair no else-->
+<ng-template #fimDeJogo>
+    <div *ngIf="tipoEncerramento === 'derrota'; else fimDeJogoVitoria" class="container" style="margin-top: 50px">
+        <div class="row">
+            <div class="col">
+                <h3 style="color: red">Fim de jogo, infelizmente você perdeu =(</h3>
+                <button class="btn btn-primary" (click)="reiniciarJogo()">Jogar novamente</button>
+            </div>
+        </div>
+    </div>    
+</ng-template>
+
+<ng-template #fimDeJogoVitoria>
+    <div class="container" style="margin-top: 50px">
+        <div class="row">
+            <div class="col">
+                <h3 style="color: green">Fim de jogo, você ganhou =D</h3>
+                <button class="btn btn-primary" (click)="reiniciarJogo()">Jogar novamente</button>
+            </div>
+        </div>
+    </div>    
+</ng-template>

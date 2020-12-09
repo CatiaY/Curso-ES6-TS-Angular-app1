@@ -1,0 +1,54 @@
+
+<!-- O componente jumbotron deve estar dentro de um container do bootstrap-->
+<div class="container">
+    <div class="jumbotron">
+        <!-- Linha dividida em duas colunas para receber o progresso e a tentativa-->
+        <div class = "row"> <!-- Linha -->
+            <!-- col-sm na documentação do bootstrap Layout -> Grid, indica q se a resolução da tela for >= 576 px, 
+                ela será dividida em duas, caso contrário, uma div ficará abaixo da outra-->
+            <div class="col-sm-6">
+                <app-progresso [progresso] = "progresso"></app-progresso>
+                <!-- Pode chamar um apelido para a variável: <app-progresso [apelido] = "progresso"></app-progresso> -->
+            </div> <!-- Coluna 1 -->
+            <div class="col-sm-6">
+                <div class="d-flex justify-content-end">  <!-- Para posicionar o componente: Bootstrap -> Utilities -> Flex-->
+                    <app-tentativas [tentativas] = "tentativas"></app-tentativas>
+                </div>
+            </div> <!-- Coluna 2 -->
+        </div> 
+
+        <div class = row>
+            <div class="col">
+                <p>Rodada {{ rodada + 1 }}/{{ frases.length }}</p>
+                <h6>{{ instrucao }}</h6>                
+                <p>{{ rodadaFrase.fraseEng }}</p>
+
+                <!-- Exemplo de 2-way binding-->
+                <!--<p>{{ resposta }}</p>-->
+
+                <!-- Campo para digitação: Components -> Forms -> TextArea -->
+                <div class="form-group">
+                    <!-- label for="exampleFormControlTextarea1">Example textarea</label -->
+                    <textarea 
+                        class="form-control" 
+                        rows="3"
+                        (input) = "atualizaResposta($event)"
+                        [value] = "resposta"> <!-- Atualliza o texto no textArea de acordo com a variável resposta por meio do Property Binding-->
+                    </textarea> <!-- (input) dispara o método atualizaResposta() quando o usuário inserir texto -->
+                </div>                
+            </div>
+        </div>       
+
+        <div class="row">
+            <div class="col">                
+                <div class="d-flex justify-content-end">  <!-- Para posicionar o botão: Bootstrap -> Utilities -> Flex-->
+                    <button 
+                        type="button" 
+                        class="btn btn-primary" 
+                        (click)="verificarResposta()"
+                    >Verificar</button>
+                </div>                
+            </div>
+        </div>
+    </div>  
+</div>

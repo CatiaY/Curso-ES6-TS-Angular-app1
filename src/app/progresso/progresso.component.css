@@ -1,0 +1,9 @@
+/* Altera o background da div progress, que é a barra completa. A div progress-bar representa o qt falta preencher */
+.progress {
+    background: #EEF8DA;
+    border: solid 1px #99CE28;
+}
+
+.progress-bar {
+    background: #99CE28;
+}

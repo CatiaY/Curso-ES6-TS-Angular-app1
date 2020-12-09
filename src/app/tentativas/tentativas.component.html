@@ -1,0 +1,7 @@
+<!-- atributo "src" está encapsulado por "[]" pois será alterado via código na classe do componente-->
+<!--<img [src] ="coracaoVazio" /> -->  <!-- O atributo normal seria: <img src ="/assets/coracao_vazio.png" />-->
+<!-- <img [src] ="coracaoCheio" />
+<img [src] ="coracaoCheio" /> -->
+
+<!-- Usar loop para repetir trecho de código. Cada um dos elementos da variável coracoes é capturado pela variável coracao-->
+<img *ngFor="let coracao of coracoes" [src]="coracao.exibeCoracao()" />

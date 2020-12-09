@@ -1,3 +1,14 @@
+## Aplicativo criado no curso de "Desenvolvimento Web com ES6, Typescript e Angular"
+<p>Instrutor do curso: Jorge Sant Ana.</p>
+
+<p>Ver projeto em: http://udemy-typescript-app1.s3-website-sa-east-1.amazonaws.com/</p>
+
+<p>&nbsp;</p>
+
+![Preview](ReadMe/app1.gif)
+
+<p>&nbsp;</p>
+
 # App1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.

@@ -1,4 +1,5 @@
-## Aplicativo criado no curso de "Desenvolvimento Web com ES6, Typescript e Angular"
+## Mini-game de tradução de cores em inglês
+O jogador deve acertar a tradução de algumas cores em inglês. Criado a partir do curso de "Desenvolvimento Web com ES6, Typescript e Angular".
 <p>Instrutor do curso: Jorge Sant Ana.</p>
 
 <p>Ver projeto em: http://udemy-typescript-app1.s3-website-sa-east-1.amazonaws.com/</p>
